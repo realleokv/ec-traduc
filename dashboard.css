@@ -1,0 +1,400 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #0b1437;
+    color: #ffffff;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* ======================================================
+   LAYOUT E ESTRUTURA PRINCIPAL
+   ====================================================== */
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar Futurista */
+.sidebar {
+    width: 260px;
+    background: rgba(11, 20, 55, 0.8);
+    backdrop-filter: blur(20px);
+    border-right: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 1.1rem;
+    color: #fff;
+}
+
+.logo-icon {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #7551FF, #00F0FF);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 15px rgba(117, 81, 255, 0.4);
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 40px;
+}
+
+.sidebar-nav a {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 18px;
+    color: #a0aec0;
+    text-decoration: none;
+    border-radius: 14px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.sidebar-nav a.active, .sidebar-nav a:hover {
+    background: rgba(117, 81, 255, 0.15);
+    color: #fff;
+    box-shadow: 0 4px 20px rgba(117, 81, 255, 0.2);
+}
+
+.sidebar-nav a.active i {
+    color: #7551FF;
+}
+
+.btn-logout {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #ef4444;
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 10px;
+    border-radius: 10px;
+    transition: background 0.3s;
+}
+
+.btn-logout:hover {
+    background: rgba(239, 68, 68, 0.1);
+}
+
+/* Area Principal */
+.main-content {
+    flex: 1;
+    padding: 30px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background: radial-gradient(circle at top right, rgba(117, 81, 255, 0.08), transparent 40%);
+}
+
+/* Topbar */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.welcome-text h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.welcome-text p {
+    color: #a0aec0;
+    font-size: 0.85rem;
+}
+
+.user-profile img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #7551FF;
+    object-fit: cover;
+    box-shadow: 0 0 15px rgba(117, 81, 255, 0.4);
+}
+
+/* ======================================================
+   CARDS DE METRICAS (KPI)
+   ====================================================== */
+.kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.kpi-card {
+    background: rgba(17, 25, 54, 0.7);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.kpi-info span {
+    font-size: 0.75rem;
+    color: #a0aec0;
+    letter-spacing: 0.5px;
+}
+
+.kpi-info h2 {
+    font-size: 1.25rem;
+    margin-top: 5px;
+    font-weight: 600;
+}
+
+.kpi-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.icon-purple { background: linear-gradient(135deg, #7551FF, #4318FF); }
+.icon-cyan { background: linear-gradient(135deg, #00F0FF, #0082FF); }
+.icon-orange { background: linear-gradient(135deg, #FFB547, #FF7A00); }
+.icon-green { background: linear-gradient(135deg, #01B574, #008b59); }
+
+/* ======================================================
+   CARDS GLASSMORPHISM & GRÁFICOS
+   ====================================================== */
+.glass-card {
+    background: rgba(17, 25, 54, 0.7);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.card-header {
+    margin-bottom: 20px;
+}
+
+.card-header h3 {
+    font-size: 1rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+}
+
+.card-header h3 i {
+    color: #7551FF;
+}
+
+.charts-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+.chart-wrapper {
+    position: relative;
+    height: 260px;
+    width: 100%;
+}
+
+.grid-two-columns {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 20px;
+}
+
+/* ======================================================
+   TABELAS VISION UI
+   ====================================================== */
+.table-responsive {
+    overflow-x: auto;
+}
+
+.vision-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.85rem;
+}
+
+.vision-table th {
+    padding: 12px 15px;
+    color: #a0aec0;
+    font-weight: 500;
+    font-size: 0.75rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.vision-table td {
+    padding: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    color: #e2e8f0;
+}
+
+.text-muted { color: #a0aec0; }
+
+.badge {
+    padding: 4px 10px;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.badge-purple { background: rgba(117, 81, 255, 0.2); color: #7551FF; }
+.badge-green { background: rgba(1, 181, 116, 0.2); color: #01B574; }
+.badge-red { background: rgba(239, 68, 68, 0.2); color: #ef4444; }
+
+/* Form de Ação de Aceitar Solicitação */
+.action-form {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.price-input-wrapper {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    padding: 0 8px;
+    width: 110px;
+}
+
+.price-input-wrapper span {
+    font-size: 0.75rem;
+    color: #00F0FF;
+}
+
+.input-price {
+    width: 100%;
+    background: transparent;
+    border: none;
+    color: #fff;
+    padding: 6px;
+    font-size: 0.85rem;
+    outline: none;
+}
+
+.btn-action {
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    transition: transform 0.2s;
+}
+
+.btn-action:hover { transform: scale(1.08); }
+.btn-accept { background: linear-gradient(135deg, #01B574, #008b59); }
+.btn-reject { background: linear-gradient(135deg, #ef4444, #b91c1c); }
+
+/* ======================================================
+   FORMULÁRIO DE CADASTRO DE AGENDA
+   ====================================================== */
+.vision-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-group label {
+    font-size: 0.8rem;
+    color: #a0aec0;
+}
+
+.form-group input, .form-group select {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 10px 14px;
+    border-radius: 12px;
+    color: #fff;
+    font-size: 0.85rem;
+    outline: none;
+    transition: border 0.3s;
+}
+
+.form-group select option {
+    background: #0b1437;
+    color: #fff;
+}
+
+.form-group input:focus, .form-group select:focus {
+    border-color: #7551FF;
+}
+
+.btn-submit {
+    background: linear-gradient(135deg, #7551FF, #4318FF);
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 10px;
+    box-shadow: 0 4px 15px rgba(117, 81, 255, 0.4);
+    transition: transform 0.2s;
+}
+
+.btn-submit:hover { transform: translateY(-2px); }
+
+.empty-state {
+    text-align: center;
+    padding: 30px;
+    color: #a0aec0;
+}
+
+.empty-state i {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+/* Responsividade para Telas Menores */
+@media (max-width: 1024px) {
+    .charts-grid, .grid-two-columns { grid-template-columns: 1fr; }
+    .sidebar { width: 80px; padding: 20px 10px; }
+    .brand span, .sidebar-nav a span { display: none; }
+}

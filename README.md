@@ -1,1 +1,1 @@
-# ec-traduc
+# ec-traducoes

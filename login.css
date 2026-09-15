@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0f0c1b;
+    overflow: hidden;
+    position: relative;
+}
+
+/* ======================================================
+   EFEITO DE ILUMINAÇÃO DE FUNDO (GLOW SPHERES)
+   ====================================================== */
+.glow-sphere {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(90px);
+    z-index: 1;
+}
+
+.glow-1 {
+    width: 250px;
+    height: 250px;
+    background: #8a2387;
+    top: 15%;
+    left: 25%;
+    opacity: 0.6;
+}
+
+.glow-2 {
+    width: 300px;
+    height: 300px;
+    background: #203a43;
+    bottom: 10%;
+    right: 25%;
+    opacity: 0.7;
+}
+
+/* ======================================================
+   CARTÃO GLASSMORPHISM (VIDRO FOSCO)
+   ====================================================== */
+.login-card {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    max-width: 400px;
+    padding: 40px 35px;
+    border-radius: 28px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    color: #ffffff;
+}
+
+/* Avatar / Foto */
+.avatar-container {
+    width: 85px;
+    height: 85px;
+    margin: 0 auto 15px auto;
+    border-radius: 50%;
+    padding: 3px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.05));
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.avatar-container img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Títulos */
+.login-card h2 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+}
+
+.login-card .subtitle {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 30px;
+}
+
+/* ======================================================
+   CAMPOS DE ENTRADA (INPUTS)
+   ====================================================== */
+.input-group {
+    position: relative;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+}
+
+.input-group i {
+    position: absolute;
+    left: 8px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1rem;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px 10px 10px 38px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    outline: none;
+    color: #fff;
+    font-size: 0.95rem;
+    transition: border-color 0.3s ease;
+}
+
+.input-group input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.input-group input:focus {
+    border-bottom-color: #8b5cf6;
+}
+
+/* ======================================================
+   OPÇÕES (LEMBRAR E ESQUECEU A SENHA)
+   ====================================================== */
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8rem;
+    margin-bottom: 30px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.remember-me input {
+    accent-color: #6366f1;
+    cursor: pointer;
+}
+
+.forgot-pass {
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    font-style: italic;
+    transition: color 0.3s;
+}
+
+.forgot-pass:hover {
+    color: #fff;
+}
+
+/* ======================================================
+   BOTÃO ENTRAR
+   ====================================================== */
+.btn-login {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #432b68 0%, #305196 50%, #4b6cb7 100%);
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.btn-login:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 25px rgba(99, 102, 241, 0.4);
+    filter: brightness(1.1);
+}
+
+.btn-login:active {
+    transform: translateY(0);
+}
