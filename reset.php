@@ -2,7 +2,7 @@
 require_once 'conexao.php';
 
 // A senha que queremos definir
-$senha_limpa = '$08012011$1l$2e$3o$4k$5v$';
+$senha_limpa = '0801';
 
 // O PHP cria o hash perfeito e compatível com a sua versão
 $senha_nova_criptografada = password_hash($senha_limpa, PASSWORD_DEFAULT);
